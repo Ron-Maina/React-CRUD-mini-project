@@ -27,8 +27,8 @@ useEffect(() => {
   setDetails(filteredArray)
 }, [search])
 
-function deletePerson(number){
-  const updatedAfterDelete = details.filter(detail => detail.number !== number)
+function deletePerson(id){
+  const updatedAfterDelete = details.filter(detail => detail.id !== id)
   setDetails(updatedAfterDelete)
 }
 

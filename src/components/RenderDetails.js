@@ -3,11 +3,11 @@ import React from 'react'
 
 function RenderDetails({details, onDelete}) {
 
-  function handleDelete(number){
-    fetch(`http://localhost:3001/people/${number}`, {
+  function handleDelete(id){
+    fetch(`http://localhost:3001/people/${id}`, {
       method: "DELETE"
     })
-    onDelete(number)
+    onDelete(id)
   }
 
   return (
@@ -19,7 +19,7 @@ function RenderDetails({details, onDelete}) {
             <p>Gender: {detail.gender}</p> 
             <p>Age: {detail.age}</p> 
             <p>Number: {detail.number}</p> 
-            <button onClick={() => handleDelete(detail.number)}>Delete</button> 
+            <button onClick={() => handleDelete(detail.id)}>Delete</button> 
         </div>
     ))}
     </>

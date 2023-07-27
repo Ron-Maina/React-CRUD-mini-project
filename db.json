@@ -23,14 +23,6 @@
       "gender": "female",
       "age": 24,
       "number": "456754675"
-    },
-    {
-      "firstName": "Donald",
-      "lastName": "Duck",
-      "gender": "Duck",
-      "age": "12",
-      "number": "1234567890",
-      "id": 4
     }
   ]
 }
