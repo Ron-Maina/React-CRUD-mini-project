@@ -11,7 +11,16 @@ function AddUser({onAddNewUser}) {
     function handleSubmit(e){
         e.preventDefault()
         console.log(newUser)
-        onAddNewUser(newUser)
+        fetch('http://localhost:3001/people',{
+            method: "POST",
+            headers: {
+                "Content-Type": "application/json"
+            },
+            body: JSON.stringify(newUser)
+        })
+        .then(res => res.json())
+        .then(newUser => onAddNewUser(newUser))
+        
         setNewUser({
             firstName: "",
             lastName: "",
